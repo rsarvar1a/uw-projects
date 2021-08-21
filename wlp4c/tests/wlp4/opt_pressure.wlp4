@@ -1,0 +1,33 @@
+int proc ()
+{
+  return 0;
+}
+
+int wain (int * a, int b)
+{
+  int c = 0; int d = 0; int e = 0; int f = 0; int g = 0; int h = 0;
+  int i = 0; int j = 0; int k = 0; int l = 0; int m = 0; int n = 0;
+  int o = 0; int p = 0; int q = 0; int r = 0; int s = 0; int t = 0;
+  int u = 0; int v = 0; int w = 0; int x = 0; int y = 0; int z = 0;
+
+  c = *( 1 + a); d = *( 2 + a); e = *( 3 + a); f = *( 4 + a);
+  g = *( 5 + a); h = *( 6 + a); i = *( 7 + a); j = *( 8 + a);
+  k = *( 9 + a); l = *(10 + a); m = *(11 + a); n = *(12 + a);
+  o = *(13 + a); p = *(14 + a); q = *(15 + a); r = *(16 + a);
+  s = *(17 + a); t = *(18 + a); u = *(19 + a); v = *(20 + a);
+  w = *(21 + a);
+ 
+  // Staggering pressure.
+  y = c + (d + e) + (f + (g + h)) + (i + (j + (k + l)));
+  println(y);
+ 
+  // Overloaded pressure.
+  z = c + (d + (e + (f + (g + (h + (i + (j + (k + (l + (m + (n + (o + (p + (q + (r + (s + (t + (u + (v + w)))))))))))))))))));
+  println(z);
+
+  // Yes pressure to the left of a proc, but none to the right.
+  x = (c + (d + proc())) + (e + (f + g));
+  println(x);
+
+  return 0;
+}

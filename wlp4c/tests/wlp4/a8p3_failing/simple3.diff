@@ -1,0 +1,4 @@
+3c3
+< $03 = 0xfffffffd
+---
+> $03 = 0xfffffff6

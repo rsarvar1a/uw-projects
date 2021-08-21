@@ -1,0 +1,135 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls
+dcl type ID
+type INT
+INT int
+ID d
+BECOMES =
+NUM 5
+SEMI ;
+statements statements statement
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr NE expr
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID a
+NE !=
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID a
+PLUS +
+term factor
+factor NUM
+NUM 1
+RPAREN )
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 1
+RPAREN )
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 2
+RPAREN )
+SEMI ;
+RBRACE }
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr NE expr
+expr term
+term factor
+factor ID
+ID b
+NE !=
+expr term
+term factor
+factor ID
+ID d
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 1
+RPAREN )
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 2
+RPAREN )
+SEMI ;
+RBRACE }
+RETURN return
+expr term
+term factor
+factor NUM
+NUM 0
+SEMI ;
+RBRACE }
+EOF EOF

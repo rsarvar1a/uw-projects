@@ -1,0 +1,11 @@
+2,5c2,6
+< -32
+< MIPS program completed normally.
+< $03 = 0xffffffe0
+< $31 = 0x8123456c
+---
+> 0
+> MIPS emulator internal error.
+> Invalid function
+> $03 = 0x00000000
+> $31 = 0x00000060

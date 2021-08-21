@@ -1,0 +1,239 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT
+INT int
+ID a
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr LT expr
+expr term
+term factor
+factor ID
+ID a
+LT <
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr EQ expr
+expr term
+term factor
+factor ID
+ID b
+EQ ==
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term
+term factor
+factor ID
+ID a
+GT >
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 2
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr NE expr
+expr term
+term factor
+factor ID
+ID b
+NE !=
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 7
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 6
+SEMI ;
+RBRACE }
+RBRACE }
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term
+term factor
+factor ID
+ID a
+GT >
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 1
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 5
+SEMI ;
+RBRACE }
+RBRACE }
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr LT expr
+expr term
+term term STAR factor
+term factor
+factor NUM
+NUM 2
+STAR *
+factor ID
+ID a
+LT <
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID b
+PLUS +
+term factor
+factor NUM
+NUM 40
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 3
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID a
+BECOMES =
+expr term
+term factor
+factor NUM
+NUM 4
+SEMI ;
+RBRACE }
+RBRACE }
+RETURN return
+expr term
+term factor
+factor ID
+ID a
+SEMI ;
+RBRACE }
+EOF EOF

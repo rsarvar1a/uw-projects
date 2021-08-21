@@ -1,0 +1,6 @@
+2,3c2,3
+< 0
+< MIPS program completed normally.
+---
+> MIPS emulator internal error.
+> Unaligned access

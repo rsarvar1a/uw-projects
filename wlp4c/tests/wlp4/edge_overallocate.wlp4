@@ -1,0 +1,21 @@
+int wain (int a, int b)
+{
+  int s = 1000;
+  int t = 0;
+  int * ptr = NULL;
+
+  while (s > 0)
+  {
+    ptr = new int [s];
+    if (ptr == NULL)
+    {
+      s = s / 2;
+    }
+    else
+    {
+      t = t + s;
+      s = s - 1;
+    }
+  }
+  return t;
+}

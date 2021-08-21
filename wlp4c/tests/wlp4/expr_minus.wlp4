@@ -1,0 +1,21 @@
+int wain (int a, int b)
+{
+  int * c = NULL;
+  int * d = NULL;
+  c = new int [1];
+  d = new int [2];
+
+  *c = a;
+
+  // Simple subtraction.
+  a = a - b;
+  println(a);
+
+  // Pointer difference.
+  b = c - d;
+  println(b);
+
+  // Pointer decrementation.
+  c = c + 2; // For the sake of not crashing.
+  return *(c - 2);
+}

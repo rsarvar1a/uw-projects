@@ -1,0 +1,13 @@
+int wain (int a, int b)
+{
+  int c = 0;
+  if (b < b)
+  {
+    c = 0;
+  }
+  else
+  {
+    c = a;
+  }
+  return c;
+}

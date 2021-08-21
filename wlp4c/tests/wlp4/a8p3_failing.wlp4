@@ -1,0 +1,6 @@
+int wain (int a, int b)
+{
+  return 
+    ((a + b - a % b) + (b / a - b * a) + b - (b + b + (3 + a)) % 7);
+}
+

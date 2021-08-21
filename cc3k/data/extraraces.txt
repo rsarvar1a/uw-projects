@@ -1,0 +1,5 @@
+Knight     120     25     40      n/a
+Monk       100     40     15      n/a
+tUrtle     150     10     60      n/a
+mAgician   120     70      5      2x to all potion effects
+God        500    100    100      +5 HP per turn, no limit

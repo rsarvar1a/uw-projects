@@ -1,0 +1,7 @@
+RACE        HP    ATK    DEF                 ABILITY            
+-------------------------------------------------------------------
+Shade      125     25	  25      1.5x gold bonus               
+Drow       150     25	  15      1.5x to all potion effects    
+Vampire     50     25	  25      +5 HP per hit, no max HP      
+Goblin     110     15	  20      +5 gold per slain enemy       
+Troll      120     25	  15      +5 HP per turn, capped at 120

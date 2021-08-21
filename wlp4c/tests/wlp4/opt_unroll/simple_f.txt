@@ -1,0 +1,6 @@
+Enter value for register 1: Enter value for register 2: Running MIPS program.
+0
+0
+MIPS program completed normally.
+$03 = 0x00000000
+$31 = 0x8123456c

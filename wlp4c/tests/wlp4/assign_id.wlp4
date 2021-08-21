@@ -1,0 +1,23 @@
+int wain (int a, int b)
+{
+  int * d = NULL;
+  
+  // Assignment setting int type.
+  a = 4;
+  // Expects:
+  //    LOAD  address(a)
+  //    LOAD  4
+  //    WRITE 4 to address(a)
+
+  // Assignment setting int * type.
+  d = &a;
+  // Expects:
+  //    LOAD  address(d)
+  //    LOAD  address(a)
+  //    WRITE address(a) to address(d)
+  println(*d);
+
+  return a;
+  // Expects:
+  //    $3 = 4
+}

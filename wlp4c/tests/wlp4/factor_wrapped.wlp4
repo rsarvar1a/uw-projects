@@ -1,0 +1,19 @@
+int wain (int * a, int b)
+{
+  int c = 0;
+  int * d = NULL;
+
+  // Simple ID reference, int to int.
+  c = (((b)));
+  println(c);
+
+  // Simple ID reference, int* to int*.
+  d = (((a)));
+  println(*d);
+
+  // Determining that the wrap yields int*.
+  c = *(((d)));
+  println(c);
+
+  return c;
+}

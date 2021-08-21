@@ -1,0 +1,37 @@
+Enter length of array: Enter array element 0: Enter array element 1: Enter array element 2: Enter array element 3: Enter array element 4: Running MIPS program.
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+-1
+32
+MIPS program completed normally.
+$03 = 0x00000000
+$31 = 0x8123456c

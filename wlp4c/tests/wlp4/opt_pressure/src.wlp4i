@@ -1,0 +1,1077 @@
+start BOF procedures EOF
+BOF BOF
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID proc
+LPAREN (
+params
+RPAREN )
+LBRACE {
+dcls
+statements
+RETURN return
+expr term
+term factor
+factor NUM
+NUM 0
+SEMI ;
+RBRACE }
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls
+dcl type ID
+type INT
+INT int
+ID c
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID d
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID e
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID f
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID g
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID h
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID i
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID j
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID k
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID l
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID m
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID n
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID o
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID p
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID q
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID r
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID s
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID t
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID u
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID v
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID w
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID x
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID y
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID z
+BECOMES =
+NUM 0
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID c
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 1
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID d
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 2
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID e
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 3
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID f
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 4
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID g
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 5
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID h
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 6
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID i
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 7
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID j
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 8
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID k
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 9
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID l
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 10
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID m
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 11
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID n
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 12
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID o
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 13
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID p
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 14
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID q
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 15
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID r
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 16
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID s
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 17
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID t
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 18
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID u
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 19
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID v
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 20
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID w
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor NUM
+NUM 21
+PLUS +
+term factor
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID y
+BECOMES =
+expr expr PLUS term
+expr expr PLUS term
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID c
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID d
+PLUS +
+term factor
+factor ID
+ID e
+RPAREN )
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID f
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID g
+PLUS +
+term factor
+factor ID
+ID h
+RPAREN )
+RPAREN )
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID i
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID j
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID k
+PLUS +
+term factor
+factor ID
+ID l
+RPAREN )
+RPAREN )
+RPAREN )
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor ID
+ID y
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID z
+BECOMES =
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID c
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID d
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID e
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID f
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID g
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID h
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID i
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID j
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID k
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID l
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID m
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID n
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID o
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID p
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID q
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID r
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID s
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID t
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID u
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID v
+PLUS +
+term factor
+factor ID
+ID w
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+RPAREN )
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor ID
+ID z
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID x
+BECOMES =
+expr expr PLUS term
+expr term
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID c
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID d
+PLUS +
+term factor
+factor ID LPAREN RPAREN
+ID proc
+LPAREN (
+RPAREN )
+RPAREN )
+RPAREN )
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID e
+PLUS +
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID f
+PLUS +
+term factor
+factor ID
+ID g
+RPAREN )
+RPAREN )
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor ID
+ID x
+RPAREN )
+SEMI ;
+RETURN return
+expr term
+term factor
+factor NUM
+NUM 0
+SEMI ;
+RBRACE }
+EOF EOF

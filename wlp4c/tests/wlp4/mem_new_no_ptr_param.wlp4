@@ -1,0 +1,10 @@
+int wain (int a, int b)
+{
+  int * c = NULL;
+  c = new int [3];
+  *c = 1;
+  *(c + 1) = 2;
+  *(c + 2) = 3;
+  println(*(c + 3));
+  return *c;
+}

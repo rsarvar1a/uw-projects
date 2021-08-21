@@ -1,0 +1,10 @@
+2,3c2,3
+< 1
+< MIPS program completed normally.
+---
+> MIPS emulator internal error.
+> Invalid opcode
+5c5
+< $31 = 0x8123456c
+---
+> $31 = 0x00000060

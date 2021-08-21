@@ -1,0 +1,18 @@
+int wain (int * a, int b)
+{
+  int d = 5;
+
+  // Simple assignment with simple value. 
+  *a = 666;
+  println(*a);
+
+  // Simple assignment with referenced value.
+  *a = d;
+  println(*a);
+
+  // Expr assignment.
+  *(a + 1) = d + 1;
+  println(*(a + 1));
+
+  return *(a + 1);
+}

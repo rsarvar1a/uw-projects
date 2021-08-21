@@ -1,0 +1,163 @@
+#!/bin/zsh
+
+SAMPLE='wlp4c'
+TARGET='../bin/release'
+
+SRC_DIR='wlp4'
+BIN_DIR='mips'
+TMP_DIR='build'
+
+REPORT_FILE='results.txt'
+echo "; vim:ft=asm" > $REPORT_FILE
+
+DEBUG_FILE='debugs.txt'
+echo "" > $DEBUG_FILE
+
+BARE_SIZE=1912
+
+mkdir -p ${SRC_DIR}
+mkdir -p ${BIN_DIR}
+mkdir -p ${BIN_DIR}/finals
+mkdir -p ${BIN_DIR}/samples
+mkdir -p ${TMP_DIR}
+
+while getopts ":f" arg; do
+  case $arg in
+    f)
+      FORCE='yes'
+      ;;
+  esac
+  shift $((OPTIND-1))
+done
+
+makemips ()
+{
+  # Our implementation.
+  if [[ ! -f ${SRC_DIR}/$1/src.wlp4i ]] || [[ $FORCE = 'yes' ]]; then wlp4imake ${SRC_DIR}/$1.wlp4 > ${SRC_DIR}/$1/src.wlp4i; fi
+  time ../bin/release < ${SRC_DIR}/$1/src.wlp4i > ${TMP_DIR}/generated.asm 2>>${DEBUG_FILE}
+  cs241.linkasm < ${TMP_DIR}/generated.asm > ${TMP_DIR}/prelinked.merl
+  cs241.linker ${TMP_DIR}/prelinked.merl ../assets/print.merl ../assets/alloc.merl > ${TMP_DIR}/linked.merl 2>/dev/null
+  cs241.merl 0 < ${TMP_DIR}/linked.merl > ${BIN_DIR}/finals/$1.mips 2>/dev/null
+
+  # Sample implementation.
+  wlp4c < ${SRC_DIR}/$1.wlp4 > ${BIN_DIR}/samples/$1.mips
+
+  # Clean up.
+  rm ${TMP_DIR}/generated.asm ${TMP_DIR}/prelinked.merl ${TMP_DIR}/linked.merl
+}
+
+report ()
+{
+  casename=$1
+  testcase=$2
+
+  tmp_sample=$(mktemp)
+  tmp_finals=$(mktemp)
+
+  testsdir=${SRC_DIR}/${casename}
+
+  cat ${testsdir}/${testcase}.exp | head -n -8 > ${tmp_sample}
+  cat ${testsdir}/${testcase}.out | head -n -8 > ${tmp_finals}
+
+  for reg in 03 31; do
+    cat ${testsdir}/${testcase}.exp | grep -Eo "\\\$$reg = 0x[0-9a-f]+" >> ${tmp_sample}
+    cat ${testsdir}/${testcase}.out | grep -Eo "\\\$$reg = 0x[0-9a-f]+" >> ${tmp_finals}
+  done
+
+  cat ${tmp_sample} > ${testsdir}/${testcase}_s.txt
+  cat ${tmp_finals} > ${testsdir}/${testcase}_f.txt
+  if [[ -z $(diff ${tmp_sample} ${tmp_finals}) ]]; then
+    echo -e "passed\t${casename} :: ${testcase}" >> $REPORT_FILE
+  else
+    diff ${tmp_sample} ${tmp_finals} > ${testsdir}/${testcase}.diff
+    echo -e "FAILED\t${casename} :: ${testcase}" >> $REPORT_FILE
+  fi
+
+  rm ${tmp_sample}
+  rm ${tmp_finals}
+}
+
+if [[ -z $@ ]]; then
+  FILES=( $(find ${SRC_DIR} -name '*.wlp4' -printf '%f ' | sort) )
+else
+  FILES=( )
+  OLDFILES=( $@ )
+  for f in ${OLDFILES}; do
+    newf=$(find . -wholename "./${f}" -printf '%f ')
+    FILES+=(${newf})
+  done
+fi
+
+IFS=$'\n' FILES=($(sort <<<"${FILES[*]}"))
+unset IFS
+
+for wlp4file in $FILES; do
+  
+  # We reference everything by case name.
+  casename=${wlp4file:r}
+  echo -n -e "$casename ...\t\t"
+
+  cat >> $DEBUG_FILE << EOF
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+EOF
+
+  echo "; ${casename}" >> $DEBUG_FILE
+  
+  cat >> $DEBUG_FILE << EOF
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+EOF
+
+
+  # Make the sample binary and the test binary.
+  makemips ${casename}
+
+  # Produce expectation files.
+  testsdir=${SRC_DIR}/${casename}
+  mkdir -p ${testsdir}
+ 
+  exec=''
+  if [ -z "$(cat "${SRC_DIR}/${casename}.wlp4" | grep -E 'int +wain *\( *int *\*')" ]; then
+    exec='mips.twoints'
+  else
+    exec='mips.array'
+  fi
+
+  samplesize=$(stat ${BIN_DIR}/samples/${casename}.mips | grep -Eo 'Size: [0-9]+' | grep -Eo '[0-9]+')
+  finalsize=$(stat ${BIN_DIR}/finals/${casename}.mips | grep -Eo 'Size: [0-9]+' | grep -Eo '[0-9]+')
+  savings=$(calc "(${samplesize}-${finalsize})/4" | sed 's/^[ \t]*//;s/[ \t]*$//')
+  compression=$(calc "round((${finalsize}-${BARE_SIZE})/(${samplesize}-${BARE_SIZE})*100, 2)" | sed 's/^[ \t]*//;s/[ \t]*$//')
+
+  cat >> $REPORT_FILE << EOF
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+EOF
+
+  echo "; ${casename} (on ${exec})" >> $REPORT_FILE
+  echo "; (${compression}%) ${savings} instructions saved" >> $REPORT_FILE
+  
+  cat >> $REPORT_FILE << EOF
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+EOF
+
+  for inputfile in `find ${testsdir} -name '*.in' -printf '%f\n'`; do
+    testcase=${inputfile:r}
+    ${exec} ${BIN_DIR}/samples/${casename}.mips < ${testsdir}/${testcase}.in &> ${testsdir}/${testcase}.exp 
+  done
+
+  # Create reports per testcase.
+  for inputfile in `find ${testsdir} -name '*.in' -printf '%f\n'`; do
+    testcase=${inputfile:r}
+    ${exec} ${BIN_DIR}/finals/${casename}.mips < ${testsdir}/${testcase}.in &> ${testsdir}/${testcase}.out
+    report ${casename} ${testcase}
+  done
+
+
+done
+

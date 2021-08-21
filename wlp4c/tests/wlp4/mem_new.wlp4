@@ -1,0 +1,20 @@
+int wain (int * a, int b)
+{
+  int * c = NULL;
+  int res = 0;
+
+  // Certain test cases will try to ask for too much memory. I believe that this is an invariant in the simulator.
+  c = new int [*a];
+
+  if (c == NULL)
+  {
+    res = 0;
+  }
+  else
+  {
+    res = 1;
+  }
+
+  println(res);
+  return res;
+}

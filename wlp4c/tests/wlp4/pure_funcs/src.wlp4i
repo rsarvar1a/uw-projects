@@ -1,0 +1,398 @@
+start BOF procedures EOF
+BOF BOF
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID pure
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID a
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls
+statements
+RETURN return
+expr term
+term term STAR factor
+term factor
+factor ID
+ID a
+STAR *
+factor ID
+ID b
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID proc
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID b
+RPAREN )
+LBRACE {
+dcls
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue STAR factor
+STAR *
+factor ID
+ID a
+BECOMES =
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID b
+SEMI ;
+RETURN return
+expr expr PLUS term
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID a
+PLUS +
+term factor
+factor NUM
+NUM 1
+SEMI ;
+RBRACE }
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NULL SEMI
+dcls
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID c
+BECOMES =
+NULL NULL
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID count
+BECOMES =
+NUM 0
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID c
+BECOMES =
+expr term
+term factor
+factor NEW INT LBRACK expr RBRACK
+NEW new
+INT int
+LBRACK [
+expr term
+term factor
+factor NUM
+NUM 4
+RBRACK ]
+SEMI ;
+statement WHILE LPAREN test RPAREN LBRACE statements RBRACE
+WHILE while
+LPAREN (
+test expr LT expr
+expr term
+term factor
+factor ID
+ID count
+LT <
+expr term
+term factor
+factor NUM
+NUM 4
+RPAREN )
+LBRACE {
+statements statements statement
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID c
+PLUS +
+term factor
+factor ID
+ID count
+RPAREN )
+BECOMES =
+expr term
+term term STAR factor
+term factor
+factor ID
+ID count
+STAR *
+factor ID
+ID count
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID count
+BECOMES =
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID count
+PLUS +
+term factor
+factor NUM
+NUM 1
+SEMI ;
+RBRACE }
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr LT expr
+expr term
+term factor
+factor ID LPAREN arglist RPAREN
+ID proc
+LPAREN (
+arglist expr COMMA arglist
+expr term
+term factor
+factor ID
+ID a
+COMMA ,
+arglist expr
+expr term
+term factor
+factor ID
+ID c
+RPAREN )
+LT <
+expr term
+term factor
+factor ID LPAREN arglist RPAREN
+ID proc
+LPAREN (
+arglist expr COMMA arglist
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID a
+PLUS +
+term factor
+factor NUM
+NUM 1
+COMMA ,
+arglist expr
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID c
+PLUS +
+term factor
+factor NUM
+NUM 1
+RPAREN )
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 1
+RPAREN )
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor NUM
+NUM 0
+RPAREN )
+SEMI ;
+RBRACE }
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID a
+RPAREN )
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term
+term factor
+factor STAR factor
+STAR *
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID a
+PLUS +
+term factor
+factor NUM
+NUM 1
+RPAREN )
+RPAREN )
+SEMI ;
+RETURN return
+expr expr MINUS term
+expr term
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID LPAREN arglist RPAREN
+ID pure
+LPAREN (
+arglist expr COMMA arglist
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID a
+COMMA ,
+arglist expr
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+PLUS +
+term factor
+factor ID LPAREN arglist RPAREN
+ID pure
+LPAREN (
+arglist expr COMMA arglist
+expr term
+term factor
+factor STAR factor
+STAR *
+factor ID
+ID a
+COMMA ,
+arglist expr
+expr term
+term factor
+factor ID
+ID b
+RPAREN )
+RPAREN )
+MINUS -
+term factor
+factor LPAREN expr RPAREN
+LPAREN (
+expr expr PLUS term
+expr term
+term factor
+factor ID LPAREN arglist RPAREN
+ID proc
+LPAREN (
+arglist expr COMMA arglist
+expr term
+term factor
+factor ID
+ID a
+COMMA ,
+arglist expr
+expr term
+term factor
+factor ID
+ID a
+RPAREN )
+PLUS +
+term factor
+factor ID LPAREN arglist RPAREN
+ID proc
+LPAREN (
+arglist expr COMMA arglist
+expr term
+term factor
+factor ID
+ID a
+COMMA ,
+arglist expr
+expr term
+term factor
+factor ID
+ID a
+RPAREN )
+RPAREN )
+SEMI ;
+RBRACE }
+EOF EOF

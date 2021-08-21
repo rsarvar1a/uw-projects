@@ -1,0 +1,14 @@
+int wain (int * a, int b)
+{
+  int d = 0;
+  int * c = NULL;
+  
+  // Handled gracefully, doesn't delete NULL.
+  delete [] c;
+
+  d = *a;
+  // Handled.
+  delete [] a;
+
+  return d;
+}

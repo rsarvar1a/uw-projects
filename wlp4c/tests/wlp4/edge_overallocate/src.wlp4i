@@ -1,0 +1,154 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT
+INT int
+ID a
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NULL SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls
+dcl type ID
+type INT
+INT int
+ID s
+BECOMES =
+NUM 1000
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID t
+BECOMES =
+NUM 0
+SEMI ;
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID ptr
+BECOMES =
+NULL NULL
+SEMI ;
+statements statements statement
+statements
+statement WHILE LPAREN test RPAREN LBRACE statements RBRACE
+WHILE while
+LPAREN (
+test expr GT expr
+expr term
+term factor
+factor ID
+ID s
+GT >
+expr term
+term factor
+factor NUM
+NUM 0
+RPAREN )
+LBRACE {
+statements statements statement
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID ptr
+BECOMES =
+expr term
+term factor
+factor NEW INT LBRACK expr RBRACK
+NEW new
+INT int
+LBRACK [
+expr term
+term factor
+factor ID
+ID s
+RBRACK ]
+SEMI ;
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr EQ expr
+expr term
+term factor
+factor ID
+ID ptr
+EQ ==
+expr term
+term factor
+factor NULL
+NULL NULL
+RPAREN )
+LBRACE {
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID s
+BECOMES =
+expr term
+term term SLASH factor
+term factor
+factor ID
+ID s
+SLASH /
+factor NUM
+NUM 2
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements statements statement
+statements
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID t
+BECOMES =
+expr expr PLUS term
+expr term
+term factor
+factor ID
+ID t
+PLUS +
+term factor
+factor ID
+ID s
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID
+ID s
+BECOMES =
+expr expr MINUS term
+expr term
+term factor
+factor ID
+ID s
+MINUS -
+term factor
+factor NUM
+NUM 1
+SEMI ;
+RBRACE }
+RBRACE }
+RETURN return
+expr term
+term factor
+factor ID
+ID t
+SEMI ;
+RBRACE }
+EOF EOF

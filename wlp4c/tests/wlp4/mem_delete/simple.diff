@@ -1,0 +1,9 @@
+2,4c2,5
+< MIPS program completed normally.
+< $03 = 0x00000050
+< $31 = 0x8123456c
+---
+> MIPS emulator internal error.
+> Out of bounds
+> $03 = 0x00000000
+> $31 = 0x00000098

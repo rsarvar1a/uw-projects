@@ -1,0 +1,47 @@
+int wain (int a, int b)
+{
+  if (a < b)
+  {
+    if (b == b)
+    {
+      if (a > b)
+      {
+        a = 2;
+      }
+      else
+      {
+        if (b != b)
+        {
+          a = 7;
+        }
+        else
+        {
+          a = 6;
+        }
+      }
+    }
+    else
+    {
+      if (a > b)
+      {
+        a = 1;
+      }
+      else
+      {
+        a = 5;
+      }
+    }
+  }
+  else
+  {
+    if (2 * a < b + 40)
+    {
+      a = 3;
+    }
+    else
+    {
+      a = 4;
+    }
+  }
+  return a;
+}

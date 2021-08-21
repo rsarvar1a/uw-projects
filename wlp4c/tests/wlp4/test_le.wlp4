@@ -1,0 +1,21 @@
+int wain (int * a, int b)
+{
+  int d = 3; 
+  if (*a <= *(a + 1))
+  {
+    println(1);
+  }
+  else
+  {
+    println(2);
+  }
+  if (b <= d)
+  {
+    println(1);
+  }
+  else
+  {
+    println(2);
+  }
+  return 0;
+}

@@ -1,0 +1,9 @@
+int proc ()
+{
+  return 5;
+}
+
+int wain (int a, int b)
+{
+  return a + b + proc();
+}

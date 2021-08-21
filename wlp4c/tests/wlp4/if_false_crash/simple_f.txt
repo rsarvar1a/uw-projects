@@ -1,0 +1,5 @@
+Enter value for register 1: Enter value for register 2: Running MIPS program.
+MIPS emulator internal error.
+Division by zero
+$03 = 0x00000000
+$31 = 0x8123456c

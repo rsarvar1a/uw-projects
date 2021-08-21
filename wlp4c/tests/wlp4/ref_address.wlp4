@@ -1,0 +1,6 @@
+int wain (int * a, int b)
+{
+  a = &b;
+  println(*a);
+  return b;
+}

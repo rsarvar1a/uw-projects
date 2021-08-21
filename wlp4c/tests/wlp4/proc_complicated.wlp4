@@ -1,0 +1,45 @@
+int proc1 (int * a, int b, int * c, int d)
+{
+  *(a + b) = *(c + d);
+  return b + d;
+}
+
+int proc2 (int a, int * b)
+{
+  if (a % 2 == 0)
+  {
+    println(1);
+  }
+  else
+  {
+    println(0);
+  }
+  *b = *b + 1;
+  return *b;
+}
+
+int proc3 (int * a)
+{
+  return proc2(5, a);
+}
+
+int wain (int * a, int b)
+{
+  int * c = NULL;
+  int d = 10;
+  int e = 0;
+  int count = 0;
+
+  c = new int [d];
+  while (count < 10)
+  {
+    *(c + count) = count * count;
+    count = count + 1;
+  }
+
+  e = (((proc1(a, b, c, d) + proc1(a, b, c, d)) + (proc1(a, b, c, d) - proc1(a, b, c, d))) +
+      ((proc1(a, b, c, d) * proc1(a, b, c, d)) + (proc1(a, b, c, d) / proc1(a, b, c, d))));
+  println(e);
+
+  return proc1(a, b, c, d) + (*(c + *(c + 2)) - 5 * proc3(a)) + *a;
+}
