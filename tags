@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/rsarvaria/uWaterloo/uw-projects/public/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+CC3K, a roguelike game.	cc3k/README.md	/^# CC3K, a roguelike game.$/;"	c
+EOF	wlp4c/tests/runtests	/^  cat >> $DEBUG_FILE << EOF$/;"	h
+EOF	wlp4c/tests/runtests	/^  cat >> $REPORT_FILE << EOF$/;"	h
+FILES=	wlp4c/tests/runtests	/^  FILES=( )$/;"	f
+Fwain	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^Fwain:$/;"	l
+How To Play	cc3k/README.md	/^# How To Play$/;"	c
+How to Use	wlp4c/README.md	/^# How to Use$/;"	c
+OS161	os161/README.md	/^# OS161$/;"	c
+Optimizations	wlp4c/README.md	/^# Optimizations$/;"	c
+Projects	README.md	/^# Projects$/;"	c
+Source Code	README.md	/^# Source Code$/;"	c
+Troubleshooting	cc3k/README.md	/^# Troubleshooting$/;"	c
+Usage	os161/README.md	/^# Usage$/;"	c
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $29, $30, $0 ; restore frame pointer$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $3, $0, $0$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $3, $6, $3$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $30, $30, $5$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $30, $30, $8$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $5, $0, $0$/;"	l
+add	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^add $5, $5, $3$/;"	l
+jr	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^jr $31$/;"	l
+lis	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lis $11 ; 11 contains 1$/;"	l
+lis	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lis $4 ; $4 contains 4$/;"	l
+lis	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lis $8 ; $8 contains 8 - good stack bump tradeoff!$/;"	l
+lw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lw $1, -4($30) ; restoring initial $1$/;"	l
+lw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lw $2, -8($30) ; restoring initial $2$/;"	l
+lw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lw $3, 4($29)$/;"	l
+lw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lw $3, 8($29)$/;"	l
+lw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^lw $5, 8($29)$/;"	l
+makemips	wlp4c/tests/runtests	/^makemips ()$/;"	f
+report	wlp4c/tests/runtests	/^report ()$/;"	f
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $29, $30, $4$/;"	l
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $3, $0, $0$/;"	l
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $30, $30, $5$/;"	l
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $30, $30, $8 ; making space for original registers$/;"	l
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $30, $30, $8 ; making space for parameters$/;"	l
+sub	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sub $6, $5, $3$/;"	l
+sw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sw $1, -4($30) ; save reg state, allowing $1 to be scratch$/;"	l
+sw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sw $1, 8($29) ; location of wain's first 'argument'$/;"	l
+sw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sw $2, -8($30) ; save reg state, allowing $2 to be scratch$/;"	l
+sw	wlp4c/tests/wlp4/opt_inverse_depth/mips.asm	/^sw $2, 4($29) ; location of wain's second 'argument'$/;"	l
+wlp4c	wlp4c/README.md	/^# wlp4c$/;"	c
